@@ -54,10 +54,10 @@ class knapsack:
     
     def create_data_model(self, ilst, bins, capacity):
         lst = ilst.copy()
-        # if len(lst) < bins * capacity:
-        #     padding = bins * capacity - len(lst)
-        #     for i in range(padding):
-        #         lst.append(Task(f"Freetime", None, None, 1, 1, 1, 1))
+        if len(lst) < bins * capacity:
+            padding = bins * capacity - len(lst)
+            for i in range(padding):
+                lst.append(Task(f"Freetime", None, None, 1, 1, 1, 1))
         
         data = {}
         estimated_time = [_.estimated_time for _ in lst]

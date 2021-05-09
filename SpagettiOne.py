@@ -222,7 +222,7 @@ class Interface():
     print("Select hour")
     val = input("Time: ")
     
-    value = _check_num(val)
+    value = self._check_num(val)
     if value != None:
       return value
 
